@@ -1,30 +1,29 @@
 /**
- * @name midnight
- * @description A dark, rounded discord theme.
- * @author refact0r
+ * @name Ethereal
+ * @description A dark, hightly cusomizable theme for Discord.
+ * @author refact0r edited by CryoticSouls
  * @version 1.6.2
- * @invite nz87hXyvcy
- * @website https://github.com/refact0r/midnight-discord
- * @source https://github.com/refact0r/midnight-discord/blob/master/midnight.theme.css
- * @authorId 508863359777505290
- * @authorLink https://www.refact0r.dev
 */
 
 /* IMPORTANT: make sure to enable dark mode in discord settings for the theme to apply properly!!! */
 
-@import url('https://refact0r.github.io/midnight-discord/midnight.css');
+/* IMPORTANT: main import! Do not delete or the theme will not work! */
+@import url('Ethereal.css');
 
 /* customize things here */
 :root {
 	/* font, change to 'gg sans' for default discord font*/
-	--font: 'figtree';
+	--font: 'gg sans';
 
 	/* top left corner text */
-	--corner-text: 'Midnight';
+	--corner-text: '__>Floating Through The Planes Of Etheral Existence';
+
+	/* thickness of messages divider */
+	--divider-thickness: 3px;
 
 	/* color of status indicators and window controls */
-	--online-indicator: var(--accent-2); /* change to #23a55a for default green */
-	--dnd-indicator: hsl(340, 60%, 60%); /* change to #f13f43 for default red */
+	--online-indicator: hsl(145, 65%, 39%); /* change to #23a55a for default green */
+	--dnd-indicator: hsl(340, 60%, 60%); /* change to #f23f43 for default red */
 	--idle-indicator: hsl(50, 60%, 60%); /* change to #f0b232 for default yellow */
 	--streaming-indicator: hsl(260, 60%, 60%); /* change to #593695 for default purple */
 
@@ -34,22 +33,36 @@
 	--accent-3: hsl(190, 70%, 42%); /* accent buttons */
 	--accent-4: hsl(190, 70%, 36%); /* accent buttons when hovered */
 	--accent-5: hsl(190, 70%, 30%); /* accent buttons when clicked */
+	--accent-6: hsl(190, 70%, 24%); /* typing dots indicator */
+	--accent-7: hsl(190, 70%, 18%); /* highlight selection */
 	--mention: hsla(190, 80%, 52%, 0.1); /* mentions & mention messages */
 	--mention-hover: hsla(190, 80%, 52%, 0.05); /* mentions & mention messages when hovered */
+	--window-minimize: hsl(220, 25%, 70%); /* window control minimize button */
+	--window-maximize: hsl(220, 25%, 70%); /* window control maximize button */
+	--window-close: hsl(0, 70%, 60%); /* window control close button */
+	--unread-pill: hsl(190, 70%, 48%); /* unread message pill */
+	--vc-activity: hsl(0, 0%, 100%); /* voice call activity indicators */
+	--scrollbar-thumb: hsl(220, 15%, 25%); /* scrollbar thumb */
 
 	/* text colors */
 	--text-0: white; /* text on colored elements */
 	--text-1: var(--text-2); /* other normally white text */
 	--text-2: hsl(220, 25%, 70%); /* headings and important text */
 	--text-3: hsl(220, 15%, 60%); /* normal text */
-	--text-4: hsl(220, 15%, 40%); /* icon buttons and channels */
+	--text-4: hsl(220, 15%, 40%); /* channels */
 	--text-5: hsl(220, 15%, 25%); /* muted channels/chats and timestamps */
+	--text-6: hsl(220, 15%, 20%); /* corner text */
+	--text-7: hsl(220, 15%, 15%); /* placeholder texts */
+	--text-8: hsl(220, 15%, 10%); /* timestamps */
+	--text-9: hsl(220, 15%, 5%); /* button hover text */
+	--text-10: hsl(220, 15%, 0%); /* channel icon buttons */
 
 	/* background and dark colors */
 	--bg-1: hsl(220, 15%, 20%); /* dark buttons when clicked */
 	--bg-2: hsl(220, 15%, 16%); /* dark buttons */
 	--bg-3: hsl(220, 15%, 13%); /* spacing, secondary elements */
 	--bg-4: hsl(220, 15%, 10%); /* main background color */
+	--bg-5: hsl(0, 0%, 0%); /* scroll bars */
 	--hover: hsla(230, 20%, 40%, 0.1); /* channels and buttons when hovered */
 	--active: hsla(220, 20%, 40%, 0.2); /* channels and buttons when clicked or selected */
 	--message-hover: hsla(220, 0%, 0%, 0.1); /* messages when hovered */
@@ -89,3 +102,54 @@
 	--windows-nav: none;
 	--custom-nav: block;
 }
+
+/* collapsible server members list. Comment out to disable feature */
+:root {
+	--hidden-user-width: 60px;
+	--user-width: 240px;
+}
+.container_c8ffbb,
+.membersWrap_c8ffbb {
+  transition-duration: var(--transition-time);
+  justify-content: unset;
+  min-width: unset;
+  width: var(--hidden-user-width);
+}
+
+.membersGroup_c8ffbb {
+  height: 0px;
+  transition-duration: var(--transition-time);
+  padding-top: 0px;
+  overflow: hidden;
+}
+
+.container__0f2e8 {
+  height: 0px;
+  transition-duration: var(--transition-time);
+  overflow: hidden;
+  padding: 0px;
+}
+
+.container_c8ffbb:hover .membersGroup_c8ffbb,
+.membersWrap_c8ffbb:hover .membersGroup_c8ffbb {
+  height: 40px;
+  padding-top: 24px;
+}
+
+.container_c8ffbb:hover {
+  .container__0f2e8 {
+	height: 48px;
+	padding: 8px;
+  }
+}
+
+.container_c8ffbb:hover,
+.membersWrap_c8ffbb:hover {
+  width: var(--user-width);
+}
+
+.profilePanel-2PWEok {
+  transition-duration: var(--transition-time);
+}
+
+/* // FOR REFERENCE: container- is for normal chats and membersWrap- is for full-screen threads! */
