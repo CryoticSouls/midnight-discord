@@ -8,7 +8,7 @@
 /* IMPORTANT: make sure to enable dark mode in discord settings for the theme to apply properly!!! */
 
 /* IMPORTANT: main import! Do not delete or the theme will not work! */
-@import url('Ethereal.css');
+@import url('https://cryoticsouls.github.io/midnight-discord/midnight.css');
 
 /* customize things here */
 :root {
