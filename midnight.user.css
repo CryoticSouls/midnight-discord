@@ -19,36 +19,56 @@
 /* customize things here */
 :root {
 	/* font, change to 'gg sans' for default discord font*/
-	--font: @font;
+	--font: 'gg sans';
 
 	/* top left corner text */
-	--corner-text: @corner-text;
+	--corner-text: '__>Floating Through The Planes Of Etheral Existence';
 
-	/* color of online status dot, change to #23a55a for default green */
-	--online-indicator: var(--accent-2);
+	/* thickness of messages divider */
+	--divider-thickness: 3px;
+
+	/* color of status indicators and window controls */
+	--online-indicator: hsl(145, 65%, 39%); /* change to #23a55a for default green */
+	--dnd-indicator: hsl(340, 60%, 60%); /* change to #f23f43 for default red */
+	--idle-indicator: hsl(50, 60%, 60%); /* change to #f0b232 for default yellow */
+	--streaming-indicator: hsl(260, 60%, 60%); /* change to #593695 for default purple */
 
 	/* accent colors */
-	--accent-1: hsl(190, 80%, 60%); /* links */
-	--accent-2: hsl(190, 80%, 48%); /* general unread/mention elements */
-	--accent-3: hsl(190, 80%, 42%); /* accent buttons */
-	--accent-4: hsl(190, 80%, 36%); /* accent buttons when hovered */
-	--accent-5: hsl(190, 80%, 30%); /* accent buttons when clicked */
+	--accent-1: hsl(190, 70%, 60%); /* links */
+	--accent-2: hsl(190, 70%, 48%); /* general unread/mention elements */
+	--accent-3: hsl(190, 70%, 42%); /* accent buttons */
+	--accent-4: hsl(190, 70%, 36%); /* accent buttons when hovered */
+	--accent-5: hsl(190, 70%, 30%); /* accent buttons when clicked */
+	--accent-6: hsl(190, 70%, 24%); /* typing dots indicator */
+	--accent-7: hsl(190, 70%, 18%); /* highlight selection */
 	--mention: hsla(190, 80%, 52%, 0.1); /* mentions & mention messages */
 	--mention-hover: hsla(190, 80%, 52%, 0.05); /* mentions & mention messages when hovered */
+	--window-minimize: hsl(220, 25%, 70%); /* window control minimize button */
+	--window-maximize: hsl(220, 25%, 70%); /* window control maximize button */
+	--window-close: hsl(0, 70%, 60%); /* window control close button */
+	--unread-pill: hsl(190, 70%, 48%); /* unread message pill */
+	--vc-activity: hsl(0, 0%, 100%); /* voice call activity indicators */
+	--scrollbar-thumb: hsl(220, 15%, 25%); /* scrollbar thumb */
 
 	/* text colors */
 	--text-0: white; /* text on colored elements */
 	--text-1: var(--text-2); /* other normally white text */
 	--text-2: hsl(220, 25%, 70%); /* headings and important text */
 	--text-3: hsl(220, 15%, 60%); /* normal text */
-	--text-4: hsl(220, 15%, 40%); /* icon buttons and channels */
+	--text-4: hsl(220, 15%, 40%); /* channels */
 	--text-5: hsl(220, 15%, 25%); /* muted channels/chats and timestamps */
+	--text-6: hsl(220, 15%, 20%); /* corner text */
+	--text-7: hsl(220, 15%, 15%); /* placeholder texts */
+	--text-8: hsl(220, 15%, 10%); /* timestamps */
+	--text-9: hsl(220, 15%, 5%); /* button hover text */
+	--text-10: hsl(220, 15%, 0%); /* channel icon buttons */
 
 	/* background and dark colors */
 	--bg-1: hsl(220, 15%, 20%); /* dark buttons when clicked */
 	--bg-2: hsl(220, 15%, 16%); /* dark buttons */
 	--bg-3: hsl(220, 15%, 13%); /* spacing, secondary elements */
 	--bg-4: hsl(220, 15%, 10%); /* main background color */
+	--bg-5: hsl(0, 0%, 0%); /* scroll bars */
 	--hover: hsla(230, 20%, 40%, 0.1); /* channels and buttons when hovered */
 	--active: hsla(220, 20%, 40%, 0.2); /* channels and buttons when clicked or selected */
 	--message-hover: hsla(220, 0%, 0%, 0.1); /* messages when hovered */
